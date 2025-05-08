@@ -1,0 +1,126 @@
+.reads-container {
+  max-width: 1280px;
+  margin: 0 auto; /* Fix: was '3 auto' */
+  padding: 1rem 1rem 2rem 1rem;
+  border-top: 2px solid #000;
+  }
+  
+  /* Header block */
+  .reads-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap; 
+  }
+  
+  .reads-header-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .reads-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+  
+  .reads-subtitle {
+    font-size: 1.7rem;
+    margin: 0;
+  }
+  
+  .reads-header-image img {
+    width: 334px;
+    height: 223px;
+    object-fit: cover;
+  }
+  
+  /* Large main card */
+  .reads-large-card {
+    background: #f8f8f8;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    height: 739px;
+    border-bottom: 1px #666;
+  }
+  
+  .reads-card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .reads-card-summary {
+    color: #444;
+  }
+  
+  .author {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+
+  /* Grid of smaller cards */
+  .reads-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  
+  .reads-small-card {
+    width: calc(50% - 0.5rem);
+    height: 151px;
+    display: flex;
+    padding: 1rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+  
+  .reads-small-content {
+    flex: 1;
+    padding-right: 1rem;
+    
+  }
+  
+  .reads-small-title {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+  
+  .reads-small-summary {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .reads-small-img img {
+    width: 151px;
+    height: 151px;
+    object-fit: cover;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .reads-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .reads-grid {
+      flex-direction: column;
+    }
+  
+    .reads-small-card {
+      width: 100%;
+    }
+  }
+  
