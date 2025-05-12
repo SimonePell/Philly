@@ -1,0 +1,66 @@
+.newsletter-section {
+  padding: 2rem 1rem;
+  margin: auto;
+  }
+
+  
+  .newsletter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid black;
+  }
+  
+  .newsletter-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .more-link {
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 16px;
+    padding-right: 1.5rem;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .newsletter-intro {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 2rem 0;
+    color: #333;
+  }
+  
+  .newsletter-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    padding-top : 1rem;
+  }
+  
+  .newsletter-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .newsletter-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+  
+  .newsletter-card h3 {
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0.75rem 0 0.5rem;
+    padding: 0 0.75rem;
+  }
+  
+  .newsletter-card .author {
+    font-size: 0.9rem;
+    padding: 0 0.75rem 1rem;
+  }
+  

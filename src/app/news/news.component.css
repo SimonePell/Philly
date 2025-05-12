@@ -1,0 +1,233 @@
+.news-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* LEFT COLUMN (Main story) */
+.news-left img {
+  width: 100%;
+  height: auto;
+}
+
+.headline {
+  margin-top: 1rem;
+}
+
+.headline .title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.headline .author {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.headline .summary {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.points {
+  padding-left: 1rem;
+}
+
+.points li {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.points li::marker {
+  color: blue;
+  font-size: 1.5rem;
+}
+/* CENTER COLUMN (Secondary story) */
+.news-center img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.center-article .title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.center-article .author {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.center-article .summary {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.opinion-card {
+  padding: 16px;
+  border-top: 1px solid #666;
+  max-width: 100%;
+}
+
+.opinion-label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0; 
+  display: inline-block;
+  border-bottom: 8px solid red;
+}
+
+.opinion-title {
+  font-size: 2rem; 
+  font-weight: bold;
+  color: #222;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.opinion-meta {
+  font-size: 1rem;
+  color: #222;
+}
+
+.opinion-author {
+  font-weight: 500;
+}
+
+
+/* RIGHT COLUMN (The Latest + Ad) */
+.news-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.opinion,
+.latest-item {
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.8rem;
+}
+
+.opinion-tag {
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: red;
+}
+
+.opinion-title {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.opinion-time {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.latest-header {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-bottom: 0.6rem;
+  border-top: 3px solid #000;
+  padding-top: 1rem;
+}
+
+.latest-title {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.news-ad img {
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+  display: block;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .news-right {
+    grid-column: span 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .opinion,
+  .latest-item,
+  .news-ad {
+    flex: 1 1 45%;
+    min-width: 200px;
+  }
+
+  .news-center img,
+  .center-article,
+  .center-article .title,
+  .center-article .author,
+  .center-article .summary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .news-left img,
+  .news-center img {
+    width: 100%;
+    height: auto;
+  }
+
+  .center-article,
+  .center-article .title,
+  .center-article .author,
+  .center-article .summary {
+    width: 100%;
+  }
+
+  .news-right {
+    flex-direction: column;
+  }
+
+  .opinion,
+  .latest-item,
+  .news-ad {
+    width: 100%;
+    flex: unset;
+  }
+}
+
+.standalone-ad {
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.standalone-ad img {
+  max-width: 100%;
+  height: auto;
+}
+

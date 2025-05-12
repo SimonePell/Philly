@@ -1,0 +1,163 @@
+.app-bar {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+  border-bottom: 2px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.global-app-bar {
+  width: 100%;
+  background: white;
+}
+
+.app-bar-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Layout */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.shrink-icons {
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Logo */
+.header-logo {
+  flex: 1;
+  text-align: center;
+}
+
+.header-logo img {
+  height: 60px;
+  transition: height 0.3s ease;
+}
+
+.app-bar.shrink .header-logo img {
+  height: 45px;
+}
+
+/* Auth */
+.auth-section {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.signin-btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #111;
+  text-decoration: none;
+}
+
+.subscribe-btn {
+  background-color: #d5fa5e;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.offer {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+/* Date and Links */
+.date-text {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.links a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.divider {
+  color: #999;
+}
+
+/* Navigation row */
+.bottom-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mainnav-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hamburger-btn,
+.search-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mainnav-links {
+  display: flex;
+  flex-wrap: nowrap;         
+  overflow: hidden;           
+  white-space: nowrap;        
+  text-overflow: ellipsis;   
+  gap: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  max-width: 100%;       
+}
+
+.mainnav-links a {
+  text-decoration: none;
+  color: #111;
+  white-space: nowrap;
+}
+
+.mainnav-links a:hover {
+  color: #9d584e;
+  border-bottom: 2px solid #9d584e;
+}
+
+/* Shrink logic */
+.app-bar.shrink .left-block:not(.shrink-icons),
+.app-bar.shrink .bottom-row {
+  display: none;
+}
+
+.app-bar.shrink .shrink-icons {
+  display: flex;
+}
