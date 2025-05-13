@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "dist/philly",
             "index": "src/index.html",
-            "baseHref": "/Philly/",
+            "baseHref": "/philly/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
