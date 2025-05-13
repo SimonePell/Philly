@@ -15,6 +15,7 @@
           "options": {
             "outputPath": "dist/philly",
             "index": "src/index.html",
+            "baseHref": "/Philly/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -89,6 +90,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
